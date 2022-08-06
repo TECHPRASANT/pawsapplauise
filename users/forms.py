@@ -77,8 +77,7 @@ class SignUpForm(UserCreationForm):
         })
 
 
-
-            
+         
 class ResetForm(PasswordResetForm):
     email = forms.EmailField()    
     fields = ['email']
