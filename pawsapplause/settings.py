@@ -25,9 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y5!+irq(sz3k&&!b=@(ky1r$-8m@(sj6z_0ez^1@zzu(a-3&+q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+DEBUG = False
+
+ALLOWED_HOSTS = ['127.0.0.1']
+
 
 
 # Application definition
@@ -39,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users.apps.UsersConfig',
 ]
+
+CRISPY_TEMPLATE_PACK="bootstrap4"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,27 +130,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
-LOGIN_URL = 'users-login'
-
 STATIC_URL = 'static/'
-
-MEDIA_ROOT = (BASE_DIR / 'media')
-
-MEDIA_URL = '/media/'
-
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+#Media files
+MEDIA_ROOT = (BASE_DIR / 'media')
+MEDIA_URL = '/media/'
 
-
-
+# Eamil Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mailtrap.io' 
 EMAIL_HOST_USER = '3176b6833d0cc7' 
 EMAIL_HOST_PASSWORD = '469f3a47bcd851'
 EMAIL_PORT = '2525'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
