@@ -17,6 +17,11 @@ from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
 
 # Create your views here.
+
+
+def indexuser(request):
+    return render(request, 'users/indexuser.html')
+
 def password_email(request):
 	return render(request,'users/password_email_message.html')
 
@@ -62,3 +67,11 @@ def password_reset_request(request):
 					return redirect ("password_reset_done")
 	password_reset_form = ResetForm()
 	return render(request=request, template_name="users/password_reset.html", context={"password_reset_form":password_reset_form})
+
+""" from django.shortcuts import render, redirect,get_object_or_404
+from .models import PostModel
+from .forms import PostModelForm, PostUpdateForm, CommentForm
+
+from django.contrib import messages """
+# Create your views here.
+
