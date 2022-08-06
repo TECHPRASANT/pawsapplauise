@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
+    'blog.apps.BlogConfig',
 ]
 
 CRISPY_TEMPLATE_PACK="bootstrap4"
