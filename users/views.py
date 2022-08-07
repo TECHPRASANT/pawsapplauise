@@ -15,8 +15,9 @@ from django.db.models.query_utils import Q
 from django.utils.http import urlsafe_base64_encode
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
+
 def password_email(request):
 	return render(request,'users/password_email_message.html')
 
@@ -62,3 +63,21 @@ def password_reset_request(request):
 					return redirect ("password_reset_done")
 	password_reset_form = ResetForm()
 	return render(request=request, template_name="users/password_reset.html", context={"password_reset_form":password_reset_form})
+
+
+def index(request):
+   return render(request, 'blog/index.html')
+
+def reportincident(request):
+   return render(request, 'blog/reportincident.html')
+
+
+
+
+""" from django.shortcuts import render, redirect,get_object_or_404
+from .models import PostModel
+from .forms import PostModelForm, PostUpdateForm, CommentForm
+
+from django.contrib import messages """
+# Create your views here.
+

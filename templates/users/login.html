@@ -1,9 +1,9 @@
-{% extends 'partials/base.html' %} {% block title %} PawsApplause{% endblock %} {% block content %}
-
+{% extends 'partials/base.html' %} {% block title %} PawsApplause{% endblock %} {% block content %} {% include 'partials/header.html' %}
 <div class="signin">
     <div class="cover">
         <div class="container align-self-center">
             <div class="row mt-4 align-self-center">
+
                 <div class="col ml-0 border-radius-10  ">
                     <div class="card shadow border-radius-10 align-self-center da-overlay">
                         <div class="card-body overflow-hidden position-endblock">
@@ -11,10 +11,11 @@
                                 <img class="slideImages" src="/static/vendors/images/1.jpg" alt="">
                                 <img class="slideImages" src="/static/vendors/images/2.jpg" alt="">
                                 <img class="slideImages" src="/static/vendors/images/3.jpg" alt="">
-    
+                                <img class="slideImages" src="/static/vendors/images/4.jpg" alt="">
+
                             </div>
                             <div class="login-form">
-                                <h4 align="center">Admin Sign In</h4>
+                                <h4 align="center">Users Sign In</h4>
                                 <hr> {% if form.errors %}
                                 <div class="alert alert-danger alert-dismissible fade show"> {{form.errors}}
 
@@ -22,7 +23,7 @@
 
                                 </div>
                                 {% endif %}
-                                <form action="{% url 'users-login' %}" method="post">
+                                <form action="{% url 'blog-index' %}" method="post">
                                     {% csrf_token %}
                                     <div class="input-group">
                                         <input type="text" name="username" placeholder="Username" class="form-control" required maxlength="16" style="font-size: 16px;border-radius: 20px;padding: 15px 20px 15px;margin: 10px 0px 0px;width: 100%;">

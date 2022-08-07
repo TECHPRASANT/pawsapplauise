@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 
 from pathlib import Path
 import os
-
+from pickle import TRUE
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,13 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-y5!+irq(sz3k&&!b=@(ky1r$-8m@(sj6z_0ez^1@zzu(a-3&+q'
+SECRET_KEY = 'django-insecure-t*0wkszys4r+3#_u)y@3ntsyqed*4oef+8e6xib^qk_ik7%xut'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-DEBUG = False
+ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['127.0.0.1']
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,8 +41,6 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
 ]
 
-CRISPY_TEMPLATE_PACK="bootstrap4"
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,14 +50,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-#security practices
-X_FRAME_OPTIONS = 'DENY'
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SESSION_COOKIE_SECURE=True
-SESSION_EXPIRE_AT_BROWSER_CLOSE=True
-
 
 ROOT_URLCONF = 'pawsapplause.urls'
 
@@ -123,6 +114,7 @@ USE_I18N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
@@ -143,6 +135,8 @@ EMAIL_PORT = '2525'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

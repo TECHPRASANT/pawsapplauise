@@ -1,0 +1,108 @@
+ {% extends 'partials/base.html' %} {% block title %}PawsApplause Dashboard{% endblock %} {% block content %} {% include 'partials/nav.html' %}
+
+<div class="container mt-4 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-8">
+            <div class="feed p-2">
+                <br>
+                <br>
+                <div class="bg-white border mt-2">
+                    <div>
+                        <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                            <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="/static/vendors/images/ngo.png" width="45">
+                                <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Sneha's Care (NGO)</span><span class="text-success  "><b>Completed</b></span><span class="text-black-50 time">40 minutes ago</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 px-3">
+                        Title: Case Solved Reported by User...
+                        <br>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+                    <div class="d-flex justify-content-end socials p-2 py-3"></div>
+                    <div class="feed-image p-2 px-3"><img class="img-fluid img-responsive" src="/static/vendors/images/2.jpg"></div>
+                    <div class="d-flex justify-content-start socials p-5 py-3">
+                        <i class="fa fa-thumbs-up fs-4 "></i>
+
+                    </div>
+                    <div class="form-control">
+                        <input type="text" class="input-group" placeholder="Comment">
+                    </div>
+
+                    <div class="d-flex justify-content-end socials p-5 py-3">
+                        <a class="btn btn-success btn-sm"> Donate </a>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <br>
+<div class="container">
+    <div class="row mt-5 pt-3">
+        <div class="col-md-6 offset-md-3">
+            <div class="card my-3 shadow">
+                <div class="card-body">
+                    <div class="jfheuf">
+                        <div class="d-flex justify-content-around">
+                            <div>
+                                <h6><i class="fas fa-edit text-primary pr-1"></i>Share an update</h6>
+                            </div>
+                            <div>
+                                <h6>
+                                    <i class="fas fa-arrow-up text-success pr-1"></i> upload a photo
+                                </h6>
+                            </div>
+                            <div>
+                                <h6>
+                                    <i class="fas fa-book-open text-info pr-1"></i> write an article
+                                </h6>
+                            </div>
+                        </div>
+                        <hr>
+                        <textarea name="" id="" cols="3" rows="3" class="form-control" placeholder="Write Something...."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+    <!-- <div class="container">
+    <div class="row mt-5 pt-3">
+        <div class="col-md-4">
+            <div class="card my-3 shadow">
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %} {{ form}}
+                        <br>
+                        <input class="btn btn-primary btn-block" type="submit" value="Post">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            {% for post in posts %}
+            <div class="card shadow my-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-thumbnail" src="{{ post.author.profilemodel.image.url }}" alt="img">
+                        </div>
+                        <div class="col-md-8">
+                            <small>{{ post.date_created }}</small>
+                            <hr>
+                            <a class="h3" href="{% url 'blog-post-detail' post.id %}">{{ post.title }}</a>
+                            <p class="text-justify my-3">
+                                {{ post.content }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div> -->
+    {% endblock %}

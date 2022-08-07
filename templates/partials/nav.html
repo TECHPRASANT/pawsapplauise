@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between w-100">
+            <a class="navbar-brand" href="{%url 'blog-index'%}">
+                <b><h1 style="font-size: 1.5rem;">PawsApplause</h1></b>
+
+            </a>
+
+            <div class="d-flex align-items-center">
+
+                <a href="{% url 'reportincident'%}">
+                    <span class=" border border-secondary fs-3 me-3">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+                </a>
+
+                <div class="ms-3">
+                    <img src="/static/vendors/images/justinProfile.png" class="profileImage">
+                </div>
+                <div class="ms-3">
+                    <a href="/logout">
+                        <i class="fa-solid fa fa-sign-out fs-3"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>
