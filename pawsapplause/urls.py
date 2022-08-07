@@ -26,3 +26,10 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
     document_root=settings.MEDIA_ROOT)
+
+
+handler400 = 'pawsapplause.views.error_400_view'
+handler404 = 'pawsapplause.views.error_404_view'
+handler403 = 'pawsapplause.views.error_403_view'
+handler500 = 'pawsapplause.views.error_500_view'
+handler503 = 'pawsapplause.views.error_503_view'
